@@ -15,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView tvMain;
+    TextView tvMain = findViewById(R.id.tvMain);
     Button btnChangeText;
     Button btnChangeColor;
 
@@ -30,14 +30,7 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        btnChangeColor=findViewById(R.id.btnChangeColor);
-        btnChangeColor.setOnClickListener(new View.OnClickListener() {
-                                             @Override
-                                             public void onClick(View view) {
-                                                 tvMain = findViewById(R.id.tvMain);
-                                                 tvMain.setTextColor(Color.GREEN);
-                                             }
-                                         });
+
         btnChangeText=findViewById(R.id.btnChangeText);
         btnChangeText.setOnClickListener(new View.OnClickListener() {
         @Override
